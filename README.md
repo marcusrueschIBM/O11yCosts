@@ -113,4 +113,6 @@ Bekannte Einschränkungen:
 
 ## Lizenz
 
-Die Lab-Dateien in diesem Repo stehen unter der Lizenz, die du für dein Repo wählst. Das geklonte Upstream-Demo steht unter Apache-2.0.
+Lab-Dateien: Apache-2.0 (siehe [`LICENSE`](LICENSE)). Das Upstream-Demo, das `setup.sh` klont, behält seine eigene Apache-2.0-Lizenz.
+
+Die Collector-Konfigurationen in `collector-configs/` und `overlay/src/otel-collector/` sind vom Upstream-Demo abgeleitet und behalten ihre Header `Copyright The OpenTelemetry Authors`.
