@@ -2,7 +2,7 @@
 
 # Start Guide: Stack, Containers, URLs and Ports
 
-Runs with **Docker** or **Podman** on Linux, macOS and Windows (via WSL2 only). So far only macOS (Apple Silicon) with Podman 6.1.1 and Docker Compose 5.5.1 as the provider has been tested. The first-time Podman installation is described in `OTel_Astronomy_Shop_Installation_Mac_Podman.pdf`. This file is the short version for daily use.
+Runs with **Docker** or **Podman** on Linux, macOS and Windows (via WSL2 only). So far only macOS (Apple Silicon) with Podman 6.1.1 and Docker Compose 5.5.1 as the provider has been tested. The first-time installation is described in `PARTICIPANT_GUIDE.en.md`. This file is the short version for daily use.
 
 All commands run in the **repo root** (where `setup.sh`, `stack.sh` and `config.sh` live).
 

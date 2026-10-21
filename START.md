@@ -2,7 +2,7 @@
 
 # Start-Anleitung: Stack, Container, URLs und Ports
 
-Läuft mit **Docker** oder **Podman** auf Linux, macOS und Windows (nur über WSL2). Getestet ist bisher nur macOS (Apple Silicon) mit Podman 6.1.1 und Docker Compose 5.5.1 als Provider. Die Erstinstallation von Podman steht in `OTel_Astronomy_Shop_Installation_Mac_Podman.pdf`. Diese Datei ist die Kurzfassung für den täglichen Start.
+Läuft mit **Docker** oder **Podman** auf Linux, macOS und Windows (nur über WSL2). Getestet ist bisher nur macOS (Apple Silicon) mit Podman 6.1.1 und Docker Compose 5.5.1 als Provider. Die Erstinstallation steht in `TEILNEHMER.md`. Diese Datei ist die Kurzfassung für den täglichen Start.
 
 Alle Befehle laufen im **Repo-Root** (dort liegen `setup.sh`, `stack.sh`, `config.sh`).
 
@@ -135,7 +135,7 @@ Weitere Prüfungen:
 
 ```bash
 curl -s http://localhost:9090/-/healthy                                   # Prometheus
-docker exec grafana curl -s http://127.0.0.1:3000/api/health              # Grafana (Linux/macOS: docker oder podman)
+docker exec grafana curl -s http://127.0.0.1:3000/api/health              # Grafana (bei Podman: podman exec)
 ./stack.sh check                                                          # Collector
 ```
 
@@ -145,13 +145,13 @@ docker exec grafana curl -s http://127.0.0.1:3000/api/health              # Graf
 
 | Symptom | Ursache | Lösung |
 |---|---|---|
-| Port 8080 nicht erreichbar, `frontend`, `frontend-proxy`, `load-generator` im Status `Created` | `recommendation` ist `unhealthy` (`nc: not found`) | `recommendation`-Healthcheck in `compose.podman.yaml` setzen (Abschnitt 2), Stack neu starten |
+| Port 8080 nicht erreichbar, `frontend`, `frontend-proxy`, `load-generator` im Status `Created` | `recommendation` ist `unhealthy` (`nc: not found`) | `recommendation`-Healthcheck in `compose.lab.yaml` (in `overlay/`, Abschnitt 2) prüfen, Stack neu starten |
 | Keine Verbindung zu Podman (macOS/Windows) | Podman Machine gestoppt | `podman machine start` |
 | Collector-Log: `lookup kafka ... no such host` | Der Collector scrapt Kafka, im Stack gibt es keinen Kafka-Container | Dauer-Rauschen, kein Einfluss auf Shop und Sampling |
 | Collector-Log: Export an Prometheus `HTTP Status Code 500` | Prometheus war beim Start noch nicht bereit | Nach einer Minute prüfen, ob der Fehler wieder auftritt |
 | Collector startet nicht | YAML-Fehler oder unbekannter Processor in `otelcol-config.yml` | `./stack.sh logs otel-collector`, Fehler beheben, Stack neu erstellen |
 | Spans/s in den Messungen nahe 0 | Kein Traffic | `load-generator` läuft? `./stack.sh status`, mindestens 5 Minuten Traffic abwarten |
-| `Connection refused` auf Port 8000 | MCP-Container fehlt | Stack mit `-f compose.mcp.yaml` starten |
+| `Connection refused` auf Port 8000 | MCP-Container fehlt | Stack mit `./stack.sh up` starten (MCP ist Standard, nicht mit `--no-mcp`) |
 
 ---
 

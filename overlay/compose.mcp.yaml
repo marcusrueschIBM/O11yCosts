@@ -11,5 +11,5 @@ services:
       SPAN_LABEL: ${SPAN_LABEL:-span_name}
       STATUS_LABEL: ${STATUS_LABEL:-status_code}
       ERROR_VALUE: ${ERROR_VALUE:-STATUS_CODE_ERROR}
-    ports: ["8000:8000"]
+    ports: ["127.0.0.1:8000:8000"]
     depends_on: [prometheus]
