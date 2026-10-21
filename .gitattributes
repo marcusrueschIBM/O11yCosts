@@ -1,0 +1,9 @@
+*.sh text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.py text eol=lf
+Containerfile text eol=lf
+*.md text eol=lf
+*.pdf binary
+*.docx binary
+*.pptx binary

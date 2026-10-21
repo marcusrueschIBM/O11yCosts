@@ -1,0 +1,25 @@
+services:
+  grafana:
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+  checkout:
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+
+  product-catalog:
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+
+  # Das recommendation-Image enthaelt kein "nc" mehr -> Healthcheck mit bash statt nc.
+  # Ohne diesen Fix bleibt recommendation "unhealthy" und frontend, frontend-proxy
+  # und load-generator starten nie.
+  recommendation:
+    healthcheck:
+      test: ["CMD-SHELL", "bash -c '</dev/tcp/127.0.0.1/${RECOMMENDATION_PORT}'"]

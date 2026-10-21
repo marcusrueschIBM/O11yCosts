@@ -1,0 +1,8 @@
+# Lokale Umgebung / Messungen
+opentelemetry-demo/
+*.result.txt
+*.log
+.env.override
+.DS_Store
+__pycache__/
+.bob/

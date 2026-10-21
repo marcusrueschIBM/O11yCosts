@@ -1,0 +1,15 @@
+services:
+  mcp-sampling-advisor:
+    build:
+      context: ./mcp-sampling-advisor
+      dockerfile: Containerfile
+    environment:
+      PROM_URL: http://prometheus:9090
+      CALLS_METRIC: ${CALLS_METRIC:-traces_span_metrics_calls_total}
+      DURATION_BUCKET_METRIC: ${DURATION_BUCKET_METRIC:-traces_span_metrics_duration_milliseconds_bucket}
+      SERVICE_LABEL: ${SERVICE_LABEL:-service_name}
+      SPAN_LABEL: ${SPAN_LABEL:-span_name}
+      STATUS_LABEL: ${STATUS_LABEL:-status_code}
+      ERROR_VALUE: ${ERROR_VALUE:-STATUS_CODE_ERROR}
+    ports: ["8000:8000"]
+    depends_on: [prometheus]
