@@ -89,7 +89,7 @@ Eine Variante ist erst nach `./stack.sh up` wirksam. `config.sh show` prüft nur
 | Feature Flags | http://localhost:8080/feature | 8080 |
 | Prometheus | http://localhost:9090/ | 9090 |
 | MCP Sampling Advisor | http://localhost:8000/mcp | 8000 |
-| frontend-proxy (zweiter Port, von mir nicht geprüft) | – | 10000 |
+| Envoy-Admin des frontend-proxy | – | 10000 |
 
 Shop, Jaeger, Grafana, Load Generator und Feature Flags laufen alle über den Frontend Proxy auf Port 8080. Alle übrigen Container (z. B. `grafana`, `jaeger`, `cart`) bekommen von Podman dynamische Host-Ports. Öffne Grafana und Jaeger nur über die Adressen oben, nicht über die dynamischen Ports aus `podman ps`.
 

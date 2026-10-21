@@ -20,6 +20,8 @@ Dieses Repo enthält **nur die Lab-Dateien**. Das Upstream-Demo wird beim Setup 
 
 Ressourcen: Die Podman Machine, mit der das Lab getestet wurde, hatte 5 CPUs und 8 GB RAM. Der Stack besteht aus 26 Containern.
 
+> **Teilnehmer:** Die Anleitung zum Nachbauen zu Hause steht in [`TEILNEHMER.md`](TEILNEHMER.md).
+
 ## Schnellstart
 
 ```bash
@@ -63,6 +65,7 @@ Die vollständige Anleitung steht in [`ANLEITUNG.md`](ANLEITUNG.md).
 | `mcp_advisor.sh` | Empfehlungen KEEP / WATCH / SAMPLE aus dem MCP-Server |
 | `collector-configs/` | die Varianten `baseline`, `head-50`, `head-10`, `tail`, `ai-policy` |
 | `overlay/` | Dateien, die ins Demo kopiert werden (MCP-Server, `compose.lab.yaml`, `compose.mcp.yaml`) |
+| `TEILNEHMER.md` | Nachbau zu Hause: Voraussetzungen, Setup, erste Messung, Fehlersuche |
 | `ANLEITUNG.md` | Schritt-für-Schritt-Anleitung, Phasen 1–7 |
 | `START.md` | Kurzfassung Start, Stopp, URLs, Fehlerbehebung |
 | `MCP_SERVER_ERKLAERUNG.md` | MCP-Server für Einsteiger |
