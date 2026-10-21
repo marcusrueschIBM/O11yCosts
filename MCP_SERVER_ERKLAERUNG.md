@@ -1,3 +1,5 @@
+**Deutsch** | [English](MCP_SERVER_EXPLAINED.en.md)
+
 # MCP Sampling Advisor — Erklärung für Einsteiger
 
 ## Was ist MCP überhaupt?

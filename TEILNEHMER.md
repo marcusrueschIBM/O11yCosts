@@ -1,3 +1,5 @@
+**Deutsch** | [English](PARTICIPANT_GUIDE.en.md)
+
 # Teilnehmer-Anleitung: Das Lab zu Hause nachbauen
 
 Diese Anleitung führt dich von einem leeren Rechner bis zur ersten Messung. Plane großzügig Zeit ein (grobe Schätzung: 60–90 Minuten, davon viel für die Downloads). Die Dauer hängt von deiner Internetleitung ab und wurde nicht gemessen.

@@ -1,3 +1,5 @@
+**Deutsch** | [English](GUIDE.en.md)
+
 # Schritt-für-Schritt-Anleitung: Baseline, Sampling und MCP/AI Advisor
 
 **Voraussetzung:** `./setup.sh` wurde ausgeführt und `./stack.sh status` zeigt alle Container sowie Shop, Jaeger, Prometheus, Grafana, Load Generator und Feature Flags als erreichbar (siehe `README.md` und `START.md`).

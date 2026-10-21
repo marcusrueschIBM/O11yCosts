@@ -1,3 +1,5 @@
+**Deutsch** | [English](README.en.md)
+
 # O11y Costs Lab — Sampling, Kosten und KI-Advisor
 
 Reproduzierbares Lab für den Vortrag *Signal Over Noise: Smarter OpenTelemetry Sampling with AI*. Es baut auf dem

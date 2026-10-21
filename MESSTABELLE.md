@@ -1,3 +1,5 @@
+**Deutsch** | [English](MEASUREMENT_TABLE.en.md)
+
 # Messtabelle — Signal Over Noise: Smarter OpenTelemetry Sampling with AI
 
 Messungen aufnehmen mit:

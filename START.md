@@ -1,3 +1,5 @@
+**Deutsch** | [English](START.en.md)
+
 # Start-Anleitung: Stack, Container, URLs und Ports
 
 Läuft mit **Docker** oder **Podman** auf Linux, macOS und Windows (nur über WSL2). Getestet ist bisher nur macOS (Apple Silicon) mit Podman 6.1.1 und Docker Compose 5.5.1 als Provider. Die Erstinstallation von Podman steht in `OTel_Astronomy_Shop_Installation_Mac_Podman.pdf`. Diese Datei ist die Kurzfassung für den täglichen Start.
