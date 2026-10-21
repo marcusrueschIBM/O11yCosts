@@ -9,18 +9,30 @@ Dieses Repo enthält **nur die Lab-Dateien**. Das Upstream-Demo wird beim Setup 
 
 ## Voraussetzungen
 
+**Software**
+
 | Werkzeug | Zweck | Hinweis |
 |---|---|---|
 | Docker **oder** Podman mit `compose` | Container | Wird automatisch erkannt |
 | git | Upstream klonen | |
-| bash | alle Skripte | Windows: WSL2 oder Git Bash |
+| bash | alle Skripte | Windows: nur über WSL2 (nicht getestet) |
 | python3 | Auswertung in `measure.sh` und `mcp_advisor.sh` | |
 | curl | Statusprüfung | |
 | Node.js (`npx`) | nur für den MCP Inspector | optional |
 
-Ressourcen: Die Podman Machine, mit der das Lab getestet wurde, hatte 5 CPUs und 8 GB RAM. Der Stack besteht aus 26 Containern.
+**Ressourcen** (der Stack besteht aus 26 Containern)
 
-> **Teilnehmer:** Die Anleitung zum Nachbauen zu Hause steht in [`TEILNEHMER.md`](TEILNEHMER.md).
+| Ressource | Wert | Quelle |
+|---|---|---|
+| RAM und CPUs | getestet mit 5 CPUs und 8 GB RAM für die Container-Engine auf einem Rechner mit 16 GB RAM | gemessen |
+| Container im Betrieb | ca. 4 GB RAM | gemessen |
+| Freier Plattenplatz | ca. 25 GB (Images der Container: ca. 9 GB, dazu Volumes und Build-Cache) | Images gemessen, Gesamtwert Richtwert |
+| Internet | nötig, Images kommen von `ghcr.io`, `quay.io` und `docker.io` | |
+| Freie Ports | 8080, 9090, 8000, 10000 | |
+
+Mit weniger RAM wurde das Lab nicht ausprobiert.
+
+> **Teilnehmer:** Die ausführliche Anleitung zum Nachbauen zu Hause (Plattform-Vorbereitung, Go/No-Go, Fehlersuche) steht in [`TEILNEHMER.md`](TEILNEHMER.md).
 
 ## Schnellstart
 

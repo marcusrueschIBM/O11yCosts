@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # =============================================================================
-# setup.sh — richtet das Lab ein (Linux, macOS, Windows via WSL2 / Git Bash)
+# setup.sh — richtet das Lab ein (Linux, macOS, Windows via WSL2)
 #
 #   1. klont das Upstream-Demo nach ./opentelemetry-demo und pinnt den Commit
 #   2. legt die Lab-Dateien aus ./overlay darueber
